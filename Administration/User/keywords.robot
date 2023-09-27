@@ -21,21 +21,11 @@ ${Password-char}        Allweb
 
 
 *** Keywords ***
-Verify add user successfull
-    ${response}    Get Text    (//div[@class='message'])[1]
-    Should Be Equal As Strings    ${response}    Create user successfully.
-
-Verify delete user successfull
-    ${response}    Get Text    (//div[@class='message'])[1]
-    Should Be Equal As Strings    ${response}    Delete user successfully
-
-Verify username existed
-    ${response}    Get Text    //mat-error[text()='Username already existed. ']
-    Should Be Equal As Strings    ${response}    Username already existed.
-
-Verify email existed
-    ${response}    Get Text    //mat-error[text()='Email required. ']
-    Should Be Equal As Strings    ${response}    Email already existed.
+Verify
+    [Arguments]    ${xpath}    ${result}
+    Sleep    3s
+    ${response}    Get Text    ${xpath}
+    Should Be Equal As Strings    ${response}    ${result}
 
 Valid Login
     Open Browser    ${LOGIN URL}    ${BROWSER}
@@ -61,6 +51,19 @@ Add user
     Click Element    //input[@formcontrolname='password']
     Input Password    (//input[@id='mat-input-4'])[1]    ${Password}
     Input Password    (//input[@id='mat-input-5'])[1]    ${Password}
+    Click Button    (//button[@type='submit'])[1]
+
+Add user disactive
+    [Arguments]    ${Username}    ${Firstname}    ${Lastname}    ${Email}    ${password}
+    click button    //button[contains(@class,'mat-ripple aw-btn')]
+    Input Text    (//input[@id='mat-input-0'])[1]    ${Username}
+    Input Text    (//input[@id='mat-input-1'])[1]    ${Firstname}
+    Input Text    (//input[@id='mat-input-2'])[1]    ${Lastname}
+    Input Text    (//input[@id='mat-input-3'])[1]    ${Email}
+    Click Element    //input[@formcontrolname='password']
+    Input Password    (//input[@id='mat-input-4'])[1]    ${Password}
+    Input Password    (//input[@id='mat-input-5'])[1]    ${Password}
+    Click Element    (//span[@class='mat-slide-toggle-content'])[1]
     Click Button    (//button[@type='submit'])[1]
 
 Delete User

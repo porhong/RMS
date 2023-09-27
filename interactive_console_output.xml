@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230927 11:03:43.085" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230927 16:40:41.721" rpa="false" schemaversion="4">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\AW-Tester\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
-<status status="PASS" starttime="20230927 11:03:43.110" endtime="20230927 11:03:45.217"/>
+<kw name="Valid Login">
+<msg timestamp="20230927 16:40:42.331" level="FAIL">No keyword with name 'Valid Login' found.</msg>
+<status status="FAIL" starttime="20230927 16:40:42.331" endtime="20230927 16:40:42.331"/>
 </kw>
-<status status="PASS" starttime="20230927 11:03:43.109" endtime="20230927 11:03:45.217"/>
+<kw name="Go to Admin">
+<status status="NOT RUN" starttime="20230927 16:40:42.333" endtime="20230927 16:40:42.333"/>
+</kw>
+<kw name="Add user">
+<arg>${Username1}</arg>
+<arg>${Firstname1}</arg>
+<arg>${Lastname1}</arg>
+<arg>${Email1}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" starttime="20230927 16:40:42.334" endtime="20230927 16:40:42.335"/>
+</kw>
+<kw name="Verify add user successfull">
+<status status="NOT RUN" starttime="20230927 16:40:42.337" endtime="20230927 16:40:42.337"/>
+</kw>
+<kw name="Delete User">
+<status status="NOT RUN" starttime="20230927 16:40:42.340" endtime="20230927 16:40:42.340"/>
+</kw>
+<kw name="Verify delete user successfull">
+<status status="NOT RUN" starttime="20230927 16:40:42.344" endtime="20230927 16:40:42.344"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" starttime="20230927 16:40:42.347" endtime="20230927 16:40:42.347"/>
+</kw>
+<status status="PASS" starttime="20230927 16:40:41.745" endtime="20230927 16:40:43.731"/>
+</kw>
+<status status="PASS" starttime="20230927 16:40:41.745" endtime="20230927 16:40:43.732"/>
 </test>
-<status status="PASS" starttime="20230927 11:03:43.087" endtime="20230927 11:03:45.218"/>
+<status status="PASS" starttime="20230927 16:40:41.723" endtime="20230927 16:40:43.733"/>
 </suite>
 <statistics>
 <total>
