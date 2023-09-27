@@ -13,7 +13,8 @@ Valid Login
     Input Username    porhong
     Input Password    123
     Click Login
-    Welcome Page Should Be Open                    
+    Go to demand
+                  
 
 *** Keywords ***
 Open Browser To Login Page
@@ -35,3 +36,5 @@ Submit Login
 
 Welcome Page Should Be Open
     Title Should Be    ALLWEB Recruitment Management System
+Go to demand
+    Click Button
