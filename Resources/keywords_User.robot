@@ -1,41 +1,21 @@
 *** Settings ***
-Documentation       Keywords
-
-Library             SeleniumLibrary
-
-
-*** Variables ***
-${LOGIN URL}            https://dev.allweb.com.kh/rms/
-${BROWSER}              chrome
-${Title_login}          ALLWEB Recruitment Management System
-${Title_dashboard}      ALLWEB Recruitment Management System
-${username}             porhong
-${password}             123
-# Testdata
-${Username1}            Alex
-${Firstname1}           Alex
-${Lastname1}            Tester
-${Email1}               Alextester@mail.com
-${Password-Number}      123456
-${Password-char}        Allweb
-
+Documentation       Keywords user
+Library             SeleniumLibrary        
+Library             FakerLibrary
+Variables    Data.py
 
 *** Keywords ***
-Verify
-    [Arguments]    ${xpath}    ${result}
-    Sleep    3s
-    ${response}    Get Text    ${xpath}
-    Should Be Equal As Strings    ${response}    ${result}
+
 
 Valid Login
-    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Open Browser    ${Config.url}    ${Config.browser}
     Set Selenium Speed    0.2 seconds
     Maximize Browser Window
     Click Button    LOGIN
-    Input Text    username    ${username}
-    Input Text    password    ${password}
+    Input Text    username    ${Config.username}
+    Input Text    password    ${Config.password}
     Click Button    login
-    Title Should Be    ${Title_dashboard}
+    Title Should Be    ${dashbord_title}
 
 Go to Admin
     click button    //button[@aria-label='Toggle Administration']

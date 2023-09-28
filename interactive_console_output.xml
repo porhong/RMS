@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230927 16:40:41.721" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230928 15:33:22.237" rpa="false" schemaversion="4">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\AW-Tester\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
 <kw name="Valid Login">
-<msg timestamp="20230927 16:40:42.331" level="FAIL">No keyword with name 'Valid Login' found.</msg>
-<status status="FAIL" starttime="20230927 16:40:42.331" endtime="20230927 16:40:42.331"/>
+<msg timestamp="20230928 15:33:22.800" level="FAIL">No keyword with name 'Valid Login' found.</msg>
+<status status="FAIL" starttime="20230928 15:33:22.800" endtime="20230928 15:33:22.800"/>
 </kw>
 <kw name="Go to Admin">
-<status status="NOT RUN" starttime="20230927 16:40:42.333" endtime="20230927 16:40:42.333"/>
+<status status="NOT RUN" starttime="20230928 15:33:22.801" endtime="20230928 15:33:22.801"/>
 </kw>
 <kw name="Add user">
-<arg>${Username1}</arg>
-<arg>${Firstname1}</arg>
-<arg>${Lastname1}</arg>
-<arg>${Email1}</arg>
-<arg>${password}</arg>
-<status status="NOT RUN" starttime="20230927 16:40:42.334" endtime="20230927 16:40:42.335"/>
+<arg>porhong</arg>
+<arg>keat</arg>
+<arg>porhong</arg>
+<arg>porhong@allweb.com.kh.kh</arg>
+<arg>${password_gen}</arg>
+<status status="NOT RUN" starttime="20230928 15:33:22.802" endtime="20230928 15:33:22.802"/>
 </kw>
-<kw name="Verify add user successfull">
-<status status="NOT RUN" starttime="20230927 16:40:42.337" endtime="20230927 16:40:42.337"/>
+<kw name="Verify">
+<arg>//mat-error[text()='Username already existed. ']</arg>
+<arg>Username already existed.</arg>
+<status status="NOT RUN" starttime="20230928 15:33:22.804" endtime="20230928 15:33:22.804"/>
 </kw>
-<kw name="Delete User">
-<status status="NOT RUN" starttime="20230927 16:40:42.340" endtime="20230927 16:40:42.340"/>
-</kw>
-<kw name="Verify delete user successfull">
-<status status="NOT RUN" starttime="20230927 16:40:42.344" endtime="20230927 16:40:42.344"/>
+<kw name="Back to Manage User">
+<status status="NOT RUN" starttime="20230928 15:33:22.807" endtime="20230928 15:33:22.807"/>
 </kw>
 <kw name="Close Browser">
-<status status="NOT RUN" starttime="20230927 16:40:42.347" endtime="20230927 16:40:42.347"/>
+<status status="NOT RUN" starttime="20230928 15:33:22.808" endtime="20230928 15:33:22.809"/>
 </kw>
-<status status="PASS" starttime="20230927 16:40:41.745" endtime="20230927 16:40:43.731"/>
+<status status="PASS" starttime="20230928 15:33:22.260" endtime="20230928 15:33:25.351"/>
 </kw>
-<status status="PASS" starttime="20230927 16:40:41.745" endtime="20230927 16:40:43.732"/>
+<status status="PASS" starttime="20230928 15:33:22.260" endtime="20230928 15:33:25.351"/>
 </test>
-<status status="PASS" starttime="20230927 16:40:41.723" endtime="20230927 16:40:43.733"/>
+<status status="PASS" starttime="20230928 15:33:22.239" endtime="20230928 15:33:25.352"/>
 </suite>
 <statistics>
 <total>

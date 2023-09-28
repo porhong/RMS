@@ -26,7 +26,7 @@
             "target": "^\"\\${file}\"",
             "terminal": "integrated",
             "env": {},
-            "args": []
+            "args": ["--outputdir", "D:/All Web/Robot Project/RMS/Report"]
         }
     ]
 }
